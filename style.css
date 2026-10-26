@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/header-image.png");
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+
+/* Trending Now Section */
+.trending-section {
+    background: #000;
+    color: #fff;
+    padding: 25px 8% 60px;
+}
+
+.trending-section h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.trending-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 25px 35px;
+    padding: 0 20px;
+}
+
+.trending-card {
+    position: relative;
+    min-width: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trending-card img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.trending-card:hover {
+    transform: scale(1.05);
+}
+
+.rank {
+    position: absolute;
+    left: -22px;
+    bottom: -8px;
+    z-index: 2;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 0 0 3px #fff;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .trending-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .trending-card img {
+        height: 220px;
+    }
+
+    .rank {
+        font-size: 75px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .trending-section {
+        padding: 25px 5%;
+    }
+
+    .trending-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 0 12px;
+    }
+
+    .trending-card img {
+        height: 210px;
+    }
+
+    .rank {
+        font-size: 65px;
+        left: -15px;
+    }
+}
+
+
+
+
+
+/* More Reasons to Join Section */
+.reasons-section {
+    background: #000;
+    color: #fff;
+    padding: 30px 8% 50px;
+}
+
+.reasons-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.reason-card {
+    position: relative;
+    min-height: 318px;
+    padding: 25px 16px;
+    border-radius: 17px;
+    overflow: hidden;
+    background: linear-gradient(
+        149deg,
+        #1b2045 0%,
+        #21152b 55%,
+        #260f1c 100%
+    );
+}
+
+.reason-card h3 {
+    font-size: 23px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.reason-card p {
+    color: #bcb9c8;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.reason-icon {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    font-size: 42px;
+    line-height: 1;
+}
+
+/* Hover Effect */
+.reason-card {
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1000px) {
+    .reasons-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .reasons-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reason-card {
+        min-height: 260px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 550px) {
+    .reasons-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .reason-card {
+        min-height: 230px;
+        padding: 22px;
+    }
+
+    .reason-card h3 {
+        font-size: 21px;
+    }
+
+    .reason-card p {
+        font-size: 15px;
+        max-width: 95%;
+    }
+}
+
+
+
+/* Frequently Asked Questions Section */
+.faq-section {
+    background: #000;
+    color: #fff;
+    padding: 30px 8% 60px;
+}
+
+.faq-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-item {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+}
+
+/* Plus sign when question is closed */
+.faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Minus sign when question is open */
+.faq-item[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-item summary:hover {
+    background: #414141;
+}
+
+.faq-answer {
+    border-top: 1px solid #000;
+    padding: 22px 24px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.faq-item[open] summary {
+    padding-bottom: 18px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 25px 5% 40px;
+    }
+
+    .faq-section h2 {
+        font-size: 22px;
+    }
+
+    .faq-item summary {
+        padding: 18px;
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        padding: 18px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .faq-item summary {
+        font-size: 16px;
+        padding: 18px 14px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+        padding: 16px 14px;
+    }
+}
+
+
+
+
+/* Netflix Footer Section */
+.netflix-footer {
+    background: #000;
+    color: #fff;
+    padding: 50px 11% 25px;
+}
+
+.footer-signup {
+    max-width: 800px;
+    margin: 0 auto 85px;
+    text-align: center;
+}
+
+.footer-signup p {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.footer-email-form {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.footer-email-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 18px 16px;
+    background: #101010;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.footer-email-form input::placeholder {
+    color: #ccc;
+}
+
+.footer-email-form button {
+    padding: 14px 24px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer-email-form button span {
+    font-size: 30px;
+    margin-left: 10px;
+    vertical-align: -2px;
+}
+
+.footer-email-form button:hover {
+    background: #c11119;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-contact {
+    margin-bottom: 45px;
+}
+
+.footer-content a {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.footer-contact a {
+    font-size: 16px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-column a:hover,
+.footer-contact a:hover {
+    color: #fff;
+}
+
+.footer-language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-arrow {
+    margin-left: 4px;
+}
+
+.footer-country {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-captcha {
+    color: #b3b3b3;
+    font-size: 12px;
+    margin-top: 55px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .netflix-footer {
+        padding: 40px 6% 25px;
+    }
+
+    .footer-signup {
+        margin-bottom: 60px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .footer-email-form {
+        flex-direction: column;
+    }
+
+    .footer-email-form input {
+        width: 100%;
+    }
+
+    .footer-email-form button {
+        align-self: flex-start;
+        font-size: 18px;
+    }
+
+    .footer-links {
+        gap: 25px 15px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-captcha {
+        line-height: 1.5;
+    }
+}
+
+
+
+/* Trending section */
+.trending-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 10px;
+}
+
+.trending-card {
+    position: relative;
+    flex: 0 0 180px;
+    border-radius: 8px;
+}
+
+.trending-card a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.trending-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trending-card img:hover {
+    transform: scale(1.05);
+}
+
+.trending-card .rank {
+    position: absolute;
+    left: -10px;
+    bottom: 5px;
+    z-index: 2;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 2px 2px 5px #000;
+    pointer-events: none;
+}
